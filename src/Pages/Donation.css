@@ -1,0 +1,69 @@
+/* Header */
+.header {
+  background-color: #ffffff;
+  padding: 20px 0;
+  margin-top: 0;
+}
+
+.header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+/* Main */
+.main {
+  padding: 20px 0;
+}
+
+.main section {
+  margin-bottom: 20px;
+}
+
+.main section h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.main section p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Footer */
+.footer {
+  background-color: #ffffff;
+  padding: 20px 0;
+  margin-top: 0;
+}
+
+.footer p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Donation buttons */
+.donate-button {
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.donate-button:hover {
+  background-color: #000088;
+}
