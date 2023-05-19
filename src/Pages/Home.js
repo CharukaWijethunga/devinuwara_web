@@ -1,38 +1,115 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import {Image} from "react-bootstrap";
-
-
+import {useTranslation} from "react-i18next";
+import { Carousel } from 'react-carousel-minimal';
 const Home = () => {
+  const { t } = useTranslation();
+   const data = [
+    {
+      image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/GoldenGateBridge-001.jpg/1200px-GoldenGateBridge-001.jpg",
+      caption: `<div>
+                  San Francisco
+                  <br/>
+                  Next line
+                </div>`
+    },
+    {
+      image: "https://cdn.britannica.com/s:800x450,c:crop/35/204435-138-2F2B745A/Time-lapse-hyper-lapse-Isle-Skye-Scotland.jpg",
+      caption: "Scotland"
+    },
+    {
+      image: "https://static2.tripoto.com/media/filter/tst/img/735873/TripDocument/1537686560_1537686557954.jpg",
+      caption: "Darjeeling"
+    },
+    {
+      image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Palace_of_Fine_Arts_%2816794p%29.jpg/1200px-Palace_of_Fine_Arts_%2816794p%29.jpg",
+      caption: "San Francisco"
+    },
+    {
+      image: "https://i.natgeofe.com/n/f7732389-a045-402c-bf39-cb4eda39e786/scotland_travel_4x3.jpg",
+      caption: "Scotland"
+    },
+    {
+      image: "https://www.tusktravel.com/blog/wp-content/uploads/2020/07/Best-Time-to-Visit-Darjeeling-for-Honeymoon.jpg",
+      caption: "Darjeeling"
+    },
+    {
+      image: "https://www.omm.com/~/media/images/site/locations/san_francisco_780x520px.ashx",
+      caption: "San Francisco"
+    },
+    {
+      image: "https://images.ctfassets.net/bth3mlrehms2/6Ypj2Qd3m3jQk6ygmpsNAM/61d2f8cb9f939beed918971b9bc59bcd/Scotland.jpg?w=750&h=422&fl=progressive&q=50&fm=jpg",
+      caption: "Scotland"
+    },
+    {
+      image: "https://www.oyorooms.com/travel-guide/wp-content/uploads/2019/02/summer-7.jpg",
+      caption: "Darjeeling"
+    }
+  ];
+
+  const captionStyle = {
+    fontSize: '2em',
+    fontWeight: 'bold',
+  }
+  const slideNumberStyle = {
+    fontSize: '20px',
+    fontWeight: 'bold',
+  }
   return (
     <div>
       <header>
-        <h1>Welcome to Devinuwara Uthpalawanna Maha Dewalaya</h1>
+        <h1>{t('home_greeting')}</h1>
       </header>
       <main>
         <section>
-          <h2>History</h2>
+          <div style={{
+          padding: "0 20px"
+        }}>
+          <Carousel
+            data={data}
+            time={2000}
+            width="1000px"
+            height="400px"
+            captionStyle={captionStyle}
+            radius="10px"
+            slideNumber={true}
+            slideNumberStyle={slideNumberStyle}
+            captionPosition="bottom"
+            automatic={true}
+            dots={true}
+            pauseIconColor="white"
+            pauseIconSize="40px"
+            slideBackgroundColor="darkgrey"
+            slideImageFit="cover"
+            thumbnails={true}
+            thumbnailWidth="100px"
+            style={{
+              textAlign: "center",
+              maxWidth: "850px",
+              maxHeight: "500px",
+              margin: "40px auto",
+            }}
+          />
+        </div>
+        </section>
+        <section>
+          <h2>{t('home_history')}</h2>
           <p>
-            The Devinuwara Uthpalawanna Maha Dewalaya is believed to have been built in the 1st century AD. The temple was originally built by the Chola dynasty, and it was later renovated by the Sinhalese kings of Sri Lanka. The temple has been damaged by wars and natural disasters over the centuries, but it has always been rebuilt and restored.
+           {t('home_history_detail')}
           </p>
         </section>
         <section>
-          <h2>Architecture</h2>
+          <h2>{t('home_architecture')}</h2>
           <p>
-            The Devinuwara Uthpalawanna Maha Dewalaya is a beautiful example of Sri Lankan architecture. The temple is built in the Dravidian style, and it is made of brick and stone. The temple has a large main shrine, which is dedicated to Lord Vishnu. The main shrine is surrounded by a number of smaller shrines, which are dedicated to other Hindu deities. The temple complex also includes a library, a museum, and a guesthouse.
+            {t('home_architecture_detail')}
           </p>
           <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Devunuwara_Temple.jpg/1200px-Devunuwara_Temple.jpg" />
         </section>
         <section>
-          <h2>Significance</h2>
+          <h2>{t('home_significance')}</h2>
           <p>
-            The Devinuwara Uthpalawanna Maha Dewalaya is one of the most important Hindu temples in Sri Lanka. The temple is a popular pilgrimage destination for Hindus from all over Sri Lanka and from around the world. The temple is also a popular tourist destination, and it is one of the most visited places in Sri Lanka.
-          </p>
-        </section>
-        <section>
-          <h2>Events</h2>
-          <p>
-            The Devinuwara Uthpalawanna Maha Dewalaya hosts a number of festivals and events throughout the year. The most important festival is the annual Esala Perahera, which is held in July or August. The Esala Perahera is a colorful and festive event, and it is one of the most popular tourist attractions in Sri Lanka.
+            {t('home_significance_detail')}
           </p>
         </section>
         <section>
@@ -48,11 +125,7 @@ const Home = () => {
           </p>
           <p>
             The temple can be reached by bus or by train. The nearest bus station is located in Matara, and the nearest train station is located in Dondra.
-          </p>
-          <p>
             The temple can also be reached by car. The temple is located on the A2 highway, which is the main highway that runs along the southern coast of Sri Lanka.
-          </p>
-          <p>
             The temple is open to the public from 6am to 6pm, every day.
           </p>
         </section>

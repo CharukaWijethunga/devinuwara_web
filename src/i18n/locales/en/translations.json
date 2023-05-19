@@ -5,6 +5,11 @@
   "donation": "Donation",
   "contact": "Contact",
   "tag_line": "Devinuwara Uthpalawanna Maha Devalaya",
-  "submit": "Submit",
-  "go-to-page2": "Click <0>here</0> to go to page 2, {{username}}"
+  "home_greeting": "Welcome to Devinuwara Uthpalawanna Maha Dewalaya",
+  "home_history": "History",
+  "home_history_detail": "The Devinuwara Uthpalawanna Maha Dewalaya is believed to have been built in the 1st century AD. The temple was originally built by the Chola dynasty, and it was later renovated by the Sinhalese kings of Sri Lanka. The temple has been damaged by wars and natural disasters over the centuries, but it has always been rebuilt and restored.",
+  "home_architecture": "Architecture",
+  "home_architecture_detail": "The Devinuwara Uthpalawanna Maha Dewalaya is a beautiful example of Sri Lankan architecture. The temple is built in the Dravidian style, and it is made of brick and stone. The temple has a large main shrine, which is dedicated to Lord Vishnu. The main shrine is surrounded by a number of smaller shrines, which are dedicated to other Hindu deities. The temple complex also includes a library, a museum, and a guesthouse.",
+  "home_significance": "Significance",
+  "home_significance_detail": "The Devinuwara Uthpalawanna Maha Dewalaya is one of the most important Hindu temples in Sri Lanka. The temple is a popular pilgrimage destination for Hindus from all over Sri Lanka and from around the world. The temple is also a popular tourist destination, and it is one of the most visited places in Sri Lanka."
 }
