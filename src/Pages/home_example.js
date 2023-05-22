@@ -14,6 +14,17 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { useTranslation } from "react-i18next";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import SimpleSlider from "../Components/SimpleSlider";
+import Grid from "@mui/material/Grid";
+import Container from "@mui/material/Container";
+import { styled } from '@mui/material/styles';
+import Paper from '@mui/material/Paper';
+
+import { Component } from "react";
+import { blue } from "@mui/material/colors";
 
 interface Props {
   /**
@@ -44,6 +55,14 @@ export default function DrawerAppBar(props: Props) {
     i18n.changeLanguage(e.target.value);
   }
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
@@ -69,8 +88,17 @@ export default function DrawerAppBar(props: Props) {
   const container =
     window !== undefined ? () => window().document.body : undefined;
 
+
+    const Item = styled(Paper)(({ theme }) => ({
+      backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+      ...theme.typography.body2,
+      padding: theme.spacing(1),
+      textAlign: 'center',
+      color: theme.palette.text.secondary,
+    }));
+
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box maxWidth="xl" sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar
         component="nav"
@@ -136,15 +164,12 @@ export default function DrawerAppBar(props: Props) {
           {drawer}
         </Drawer>
       </Box>
-      <Box component="main" sx={{ p: 3 }}>
-        <Toolbar />
-        <Typography>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-          unde fugit veniam eius, perspiciatis sunt? Corporis qui ducimus
-          quibusdam, delectus quo eius exercitationem tempore. Delectus
-          sapiente, provident
-        </Typography>
-      </Box>
+      <Grid lg={12} item container sx={{marginTop:'25px',marginLeft:'10px',marginRight:'10px',color:{backgroundColor:'lightblue'}}}  spacing={1}>
+        <Grid lg={3}><h1 style={{backgroundColor:'green'}}>Block 1</h1></Grid>
+        <Grid lg={3}><h1 style={{backgroundColor:'green'}}>Block 2</h1></Grid>
+        <Grid lg={3}><h1 style={{backgroundColor:'green'}}>Block 3</h1></Grid>
+        <Grid lg={3}><h1 style={{backgroundColor:'green'}}>Block 4</h1></Grid>
+      </Grid>
     </Box>
   );
 }
