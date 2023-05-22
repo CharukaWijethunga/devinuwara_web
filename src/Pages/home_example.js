@@ -174,7 +174,7 @@ export default function DrawerAppBar(props: Props) {
           marginTop: "10px",
           // marginLeft: "10px",
           // marginRight: "10px",
-          color: { backgroundColor: "lightblue" },
+          // color: { backgroundColor: "lightblue" },
           height:'2200px'
         }}
       >
@@ -187,16 +187,22 @@ export default function DrawerAppBar(props: Props) {
           alignItems="stretch"
           spacing={0.3}
           sx={{color:{
-            backgroundColor:'red',
+            backgroundColor:'black',
           }}}
         >
-          <Grid item container lg={4} direction="column"
+          <Grid item container lg={4} direction="column" justifyContent="space-evenly"
            style={{color:{backgroundColor:'white'}}}>
-            <Grid item container lg={7} >
+            <Grid item container lg={6} >
               <img src={require('../assests/images/2.jpg')} width="100%" height="100%" />
             </Grid>
-            <Grid item container lg={5}>
+            <Grid item container lg={6} direction="column" textAlign='center'>
               {/* <img src={require('../assests/images/1.jpg')} width="100%" height="100%" /> */}
+                 <Typography variant="h4" sx={{color:'white',marginTop:'10px'}}>
+                        Welcome to Devinuwara
+                 </Typography>
+                 <Typography variant="h5" sx={{color:'white'}}>
+                 Uthpalawanna Maha Dewalaya
+                 </Typography>
             </Grid>
           </Grid>
 
