@@ -20,8 +20,8 @@ import "slick-carousel/slick/slick-theme.css";
 import SimpleSlider from "../Components/SimpleSlider";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
-import { styled } from '@mui/material/styles';
-import Paper from '@mui/material/Paper';
+import { styled } from "@mui/material/styles";
+import Paper from "@mui/material/Paper";
 
 import { Component } from "react";
 import { blue } from "@mui/material/colors";
@@ -88,14 +88,13 @@ export default function DrawerAppBar(props: Props) {
   const container =
     window !== undefined ? () => window().document.body : undefined;
 
-
-    const Item = styled(Paper)(({ theme }) => ({
-      backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-      ...theme.typography.body2,
-      padding: theme.spacing(1),
-      textAlign: 'center',
-      color: theme.palette.text.secondary,
-    }));
+  const Item = styled(Paper)(({ theme }) => ({
+    backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+    ...theme.typography.body2,
+    padding: theme.spacing(1),
+    textAlign: "center",
+    color: theme.palette.text.secondary,
+  }));
 
   return (
     <Box maxWidth="xl" sx={{ display: "flex" }}>
@@ -164,11 +163,96 @@ export default function DrawerAppBar(props: Props) {
           {drawer}
         </Drawer>
       </Box>
-      <Grid lg={12} item container sx={{marginTop:'25px',marginLeft:'10px',marginRight:'10px',color:{backgroundColor:'lightblue'}}}  spacing={1}>
-        <Grid lg={3}><h1 style={{backgroundColor:'green'}}>Block 1</h1></Grid>
-        <Grid lg={3}><h1 style={{backgroundColor:'green'}}>Block 2</h1></Grid>
-        <Grid lg={3}><h1 style={{backgroundColor:'green'}}>Block 3</h1></Grid>
-        <Grid lg={3}><h1 style={{backgroundColor:'green'}}>Block 4</h1></Grid>
+      <Grid
+        lg={12}
+        item
+        container
+        direction="column"
+        justifyContent="center"
+        alignItems="center"
+        sx={{
+          marginTop: "10px",
+          // marginLeft: "10px",
+          // marginRight: "10px",
+          color: { backgroundColor: "lightblue" },
+          height:'2200px'
+        }}
+      >
+        <Grid
+          item
+          lg={3}
+          container
+          direction="row"
+          justifyContent="space-evenly"
+          alignItems="stretch"
+          spacing={0.3}
+          sx={{color:{
+            backgroundColor:'red',
+          }}}
+        >
+          <Grid item container lg={4} direction="column"
+           style={{color:{backgroundColor:'white'}}}>
+            <Grid item container lg={7} >
+              <img src={require('../assests/images/2.jpg')} width="100%" height="100%" />
+            </Grid>
+            <Grid item container lg={5}>
+              {/* <img src={require('../assests/images/1.jpg')} width="100%" height="100%" /> */}
+            </Grid>
+          </Grid>
+
+
+          <Grid item container lg={8}>
+             <img src={require('../assests/images/3.jpg')} width="100%" height="100%"/>
+          </Grid>
+        </Grid>
+        <Grid
+          item
+          lg={3}
+          container
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
+          spacing={1}
+        >
+          <Grid item lg={6}>
+            <h1 style={{ backgroundColor: "green" }}>Block 1</h1>
+          </Grid>
+          <Grid item lg={3}>
+            <h1 style={{ backgroundColor: "green" }}>Block 1.1</h1>
+          </Grid>
+        </Grid>
+        <Grid
+          item
+          lg={3}
+          container
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
+          spacing={1}
+        >
+          <Grid item lg={6}>
+            <h1 style={{ backgroundColor: "green" }}>Block 1</h1>
+          </Grid>
+          <Grid item lg={3}>
+            <h1 style={{ backgroundColor: "green" }}>Block 1.1</h1>
+          </Grid>
+        </Grid>
+        <Grid
+          item
+          lg={3}
+          container
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
+          spacing={1}
+        >
+          <Grid item lg={6}>
+            <h1 style={{ backgroundColor: "green" }}>Block 1</h1>
+          </Grid>
+          <Grid item lg={3}>
+            <h1 style={{ backgroundColor: "green" }}>Block 1.1</h1>
+          </Grid>
+        </Grid>
       </Grid>
     </Box>
   );
