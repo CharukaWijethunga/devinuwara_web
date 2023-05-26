@@ -22,6 +22,9 @@ import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
+import Zoom from "@mui/material/Zoom";
+import Avatar from '@mui/material/Avatar';
+import Stack from '@mui/material/Stack';
 
 import { Component } from "react";
 import { blue } from "@mui/material/colors";
@@ -115,6 +118,13 @@ export default function DrawerAppBar(props: Props) {
           >
             <MenuIcon />
           </IconButton>
+          <Stack direction="row" spacing={2}>
+          <Avatar
+            alt="logo"
+            src="../assests/images/logo/logo1.jpg"         
+          />  
+    </Stack>
+              
           <Typography
             variant="h6"
             component="div"
@@ -124,7 +134,7 @@ export default function DrawerAppBar(props: Props) {
               color: "black",
             }}
           >
-            Welcome to Devinuwara Uthpalawanna Maha Dewalaya
+            Devinuwara Uthpalawanna Maha Dewalaya
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
@@ -175,7 +185,7 @@ export default function DrawerAppBar(props: Props) {
           // marginLeft: "10px",
           // marginRight: "10px",
           // color: { backgroundColor: "lightblue" },
-          height:'2200px'
+          height: "2200px",
         }}
       >
         <Grid
@@ -186,29 +196,114 @@ export default function DrawerAppBar(props: Props) {
           justifyContent="space-evenly"
           alignItems="stretch"
           spacing={0.3}
-          sx={{color:{
-            backgroundColor:'black',
-          }}}
+          sx={{
+            color: {
+              backgroundColor: "black",
+            },
+          }}
         >
-          <Grid item container lg={4} direction="column" justifyContent="space-evenly"
-           style={{color:{backgroundColor:'white'}}}>
-            <Grid item container lg={6} >
-              <img src={require('../assests/images/2.jpg')} width="100%" height="100%" />
+          <Grid
+            item
+            container
+            lg={4}
+            direction="column"
+            justifyContent="space-evenly"
+            style={{ color: { backgroundColor: "white" } }}
+          >
+            <Grid item container lg={7}>
+              <img
+                src={require("../assests/images/2.jpg")}
+                width="100%"
+                height="100%"
+              />
             </Grid>
-            <Grid item container lg={6} direction="column" textAlign='center'>
+            <Grid item container lg={5} direction="column" textAlign="center">
               {/* <img src={require('../assests/images/1.jpg')} width="100%" height="100%" /> */}
-                 <Typography variant="h4" sx={{color:'white',marginTop:'10px'}}>
-                        Welcome to Devinuwara
-                 </Typography>
-                 <Typography variant="h5" sx={{color:'white'}}>
-                 Uthpalawanna Maha Dewalaya
-                 </Typography>
+              <Typography
+                variant="h4"
+                sx={{ color: "white", marginTop: "10px" }}
+              >
+                Welcome to Devinuwara
+              </Typography>
+              <Typography variant="h5" sx={{ color: "white" }}>
+                Uthpalawanna Maha Dewalaya
+              </Typography>
+
+              <Zoom
+                in={true}
+                style={{ transitionDelay: true ? "500ms" : "0ms" }}
+              >
+                {
+                  <Typography
+                    variant="h7"
+                    sx={{
+                      color: "white",
+                      marginTop: "25px",
+                      marginLeft: "10px",
+                      marginRight: "10p",
+                    }}
+                  >
+                    This is the official website of Uthpalawanna Maha Dewalaya,
+                    Devinuwara. A UNESCO World Heritage
+                  </Typography>
+                }
+              </Zoom>
             </Grid>
           </Grid>
-
 
           <Grid item container lg={8}>
-             <img src={require('../assests/images/3.jpg')} width="100%" height="100%"/>
+            <img
+              src={require("../assests/images/3.jpg")}
+              width="100%"
+              height="100%"
+            />
+          </Grid>
+        </Grid>
+        <Grid
+          item
+          lg={3}
+          container
+          direction="row"
+          justifyContent="space-evenly"
+          alignItems="stretch"
+          height="100%"
+          width="95%"
+          spacing={3}
+        >
+          <Grid item lg={6} direction="column" textAlign="center" marginTop={5}>
+            <Typography variant="h6" sx={{ color: "black", marginTop: "10px" }}>
+              A Brief History of the Temple of the Sacred Tooth Relic
+            </Typography>
+            <Typography variant="h8" sx={{ color: "black" }}>
+              The Temple of the Sacred Tooth Relic is a world-renowned place of
+              worship, where the left Canine tooth of Gautama Buddha is
+              enshrined. The temple which is venerated by thousands of local &
+              foreign devotees and tourists daily was named as a world heritage
+              by UNESCO in 1988.
+            </Typography>
+            <Typography variant="h8" sx={{ color: "black", marginTop: "20px" }}>
+              The temple which carries a lot of value to Buddhists all over the
+              world also has immense cultural value. The architecture is of
+              unique Kandyan architectural style with a combination of the
+              unique style used to build “Dalada Mandira” the shrines which
+              housed the Sacred Tooth Relic previously in other kingdoms.
+            </Typography>
+            <Typography variant="h8" sx={{ color: "black", marginTop: "20px" }}>
+              The temple of the Sacred Tooth Relic is built in the city of Kandy
+              near the ancient Royal Palace which is situated to the North of
+              the temple and the forest reserve called “Udawaththa Kelaya” to
+              the East. The famous Kandy Lake also known as “Kiri Muhuda” to the
+              South and “Natha & Paththini Devala” on the West. The temple is
+              adorned with intricate carvings using gold, silver, bronze, and
+              ivory
+            </Typography>
+          </Grid>
+          <Grid item lg={6} direction="column" textAlign="center" marginTop={5}>
+            <img
+              src={require("../assests/images/1.jpg")}
+              width="100%"
+              height="100%"
+            />
           </Grid>
         </Grid>
         <Grid
@@ -220,26 +315,13 @@ export default function DrawerAppBar(props: Props) {
           alignItems="center"
           spacing={1}
         >
-          <Grid item lg={6}>
+          <Grid item lg={4}>
             <h1 style={{ backgroundColor: "green" }}>Block 1</h1>
           </Grid>
-          <Grid item lg={3}>
+          <Grid item lg={4}>
             <h1 style={{ backgroundColor: "green" }}>Block 1.1</h1>
           </Grid>
-        </Grid>
-        <Grid
-          item
-          lg={3}
-          container
-          direction="row"
-          justifyContent="center"
-          alignItems="center"
-          spacing={1}
-        >
-          <Grid item lg={6}>
-            <h1 style={{ backgroundColor: "green" }}>Block 1</h1>
-          </Grid>
-          <Grid item lg={3}>
+          <Grid item lg={4}>
             <h1 style={{ backgroundColor: "green" }}>Block 1.1</h1>
           </Grid>
         </Grid>
