@@ -50,6 +50,7 @@ const navItems = [
 export default function DrawerAppBar(props: Props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [mobileOpen1, setMobileOpen1] = React.useState(false);
 
   const { t } = useTranslation();
   const { i18n } = useTranslation();
@@ -119,7 +120,7 @@ export default function DrawerAppBar(props: Props) {
             <MenuIcon />
           </IconButton>
           <Stack direction="row" spacing={2}>
-          <Avatar
+          <Avatar 
             alt="logo"
             src="../assests/images/logo/logo1.jpg"         
           />  
